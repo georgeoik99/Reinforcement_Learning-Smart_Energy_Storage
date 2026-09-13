@@ -1,0 +1,15 @@
+{
+  "episodes": 100,
+  "environment_steps": 876000,
+  "gradient_updates": 218501,
+  "target_syncs": 876,
+  "first_episode_reward_eur": -31849.23041700437,
+  "final_episode_reward_eur": -29527.966285026043,
+  "best_exploratory_episode": 81,
+  "best_exploratory_reward_eur": -29293.977148894217,
+  "final_10_episode_mean_reward_eur": -29446.657430792682,
+  "final_10_episode_mean_loss": 2.2864075500426226,
+  "maximum_recorded_abs_q": 108.42288208007812,
+  "maximum_recorded_loss": 6.152999401092529,
+  "nonfinite_training_values": false
+}

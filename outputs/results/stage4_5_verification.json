@@ -1,0 +1,14 @@
+{
+  "tests_passed": 37,
+  "training_episodes": 200,
+  "training_repeated_on_continuation": false,
+  "frozen_validation_replay": "passed",
+  "frozen_test_replay": "passed",
+  "saved_hourly_results_and_metrics": "matched within atol 1e-8, rtol 1e-10",
+  "all_six_strategy_accounting_checks": "passed",
+  "model_provenance_hashes": "passed",
+  "q_table_unchanged": "041420848e948a58686b414355ba3c51e19f30a39a0686612c4fe2c7581451de",
+  "figures_visually_reviewed": 7,
+  "test_tuning": false,
+  "dqn_implemented": false
+}

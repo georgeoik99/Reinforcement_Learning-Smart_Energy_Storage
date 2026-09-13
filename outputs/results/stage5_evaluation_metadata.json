@@ -1,0 +1,11 @@
+{
+  "epsilon": 0,
+  "gradient_updates": 0,
+  "frozen_full_training_state_verified": true,
+  "model_reload_exact_reproduction": true,
+  "baseline_csv_metrics_reverified": true,
+  "test_year": 2025,
+  "model_sha256": "2f5d454a3fd10aa8edc51f9a32cc2092b5fb389fbd145d980c94601524335425",
+  "test_tuning": false,
+  "differences_sign": "DQN minus benchmark; negative is lower cost"
+}

@@ -1,0 +1,13 @@
+{
+  "battery_capacity_kwh": 100.0,
+  "max_charge_power_kw": 50.0,
+  "max_discharge_power_kw": 50.0,
+  "charge_efficiency": 0.95,
+  "discharge_efficiency": 0.95,
+  "initial_soc_fraction": 0.5,
+  "minimum_soc_fraction": 0.1,
+  "maximum_soc_fraction": 0.95,
+  "time_step_hours": 1.0,
+  "battery_throughput_penalty_eur_per_kwh": 0.01,
+  "note": "Portfolio simulation assumptions. Not vendor-specific engineering specifications."
+}

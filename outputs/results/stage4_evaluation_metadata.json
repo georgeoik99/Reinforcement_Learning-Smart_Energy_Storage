@@ -1,0 +1,28 @@
+{
+  "test_start": "2025-01-01 00:00:00",
+  "test_end": "2025-12-31 23:00:00",
+  "test_rows": 8760,
+  "effective_epsilon": 0,
+  "q_updates_during_evaluation": 0,
+  "q_table_sha256": "041420848e948a58686b414355ba3c51e19f30a39a0686612c4fe2c7581451de",
+  "training_states_visited": 319,
+  "possible_states": 384,
+  "unseen_test_state_hours": 3,
+  "unseen_chosen_action_hours": 3,
+  "baseline_reproduction": "identical to refined Stage-3 results within 1e-8",
+  "soc_treatment": "Common initial SOC; raw cost and separate training-price terminal valuation",
+  "test_policy_tuned": false,
+  "terminal_reference_price_eur_kwh": 0.09629499999999999,
+  "pv_surplus_behaviour": {
+    "pv_surplus_hours": 574,
+    "charge_actions_during_surplus": 0,
+    "pv_surplus_kwh": 9558.661,
+    "pv_to_battery_kwh": 0.0,
+    "surplus_captured_pct": 0.0,
+    "grid_to_battery_kwh": 0.0,
+    "discharge_to_load_kwh": 38.0,
+    "zero_flow_soc_boundary_commands": 4783,
+    "zero_flow_no_load_commands_excluding_boundary": 0,
+    "all_zero_flow_non_hold_commands": 4783
+  }
+}

@@ -1,0 +1,27 @@
+Episode 1/200: reward=-31803.92, cost=30357.77, epsilon=1.0000
+Episode 10/200: reward=-31821.21, cost=30318.25, epsilon=0.8337
+Episode 20/200: reward=-31704.75, cost=30240.22, epsilon=0.6812
+Episode 30/200: reward=-31649.78, cost=30251.78, epsilon=0.5566
+Episode 40/200: reward=-31566.36, cost=30183.78, epsilon=0.4548
+Episode 50/200: reward=-31239.53, cost=29920.26, epsilon=0.3716
+Episode 60/200: reward=-31120.51, cost=29946.38, epsilon=0.3036
+Episode 70/200: reward=-31108.46, cost=29945.70, epsilon=0.2481
+Episode 80/200: reward=-30982.60, cost=30027.62, epsilon=0.2027
+Episode 90/200: reward=-30952.08, cost=29956.52, epsilon=0.1656
+Episode 100/200: reward=-31125.49, cost=30090.72, epsilon=0.1353
+Episode 110/200: reward=-30606.16, cost=29541.96, epsilon=0.1106
+Episode 120/200: reward=-30873.76, cost=29915.73, epsilon=0.0903
+Episode 130/200: reward=-30455.87, cost=29905.49, epsilon=0.0738
+Episode 140/200: reward=-30734.04, cost=29727.93, epsilon=0.0603
+Episode 150/200: reward=-30526.32, cost=29554.12, epsilon=0.0500
+Episode 160/200: reward=-31108.93, cost=30127.16, epsilon=0.0500
+Episode 170/200: reward=-30729.16, cost=29641.57, epsilon=0.0500
+Episode 180/200: reward=-30780.49, cost=29967.44, epsilon=0.0500
+Episode 190/200: reward=-30466.78, cost=29757.64, epsilon=0.0500
+Episode 200/200: reward=-30207.95, cost=29725.39, epsilon=0.0500
+Greedy validation (no Q updates):
+  Strategy  total_electricity_cost_eur  cost_savings_eur  cost_savings_pct  total_grid_energy_purchased_kwh  pv_self_consumption_pct  battery_throughput_kwh  equivalent_full_cycles  peak_grid_import_kwh_per_hour  initial_soc_kwh  final_soc_kwh  net_soc_change_kwh  pv_to_battery_kwh  grid_to_battery_kwh  unused_discharge_kwh  pv_curtailed_kwh  battery_losses_kwh  degradation_penalty_eur  raw_electricity_cost_eur  terminal_reference_price_eur_kwh  terminal_soc_adjustment_eur  terminal_soc_adjusted_cost_eur  adjusted_cost_savings_eur  adjusted_cost_savings_pct  pv_generation_kwh  pv_surplus_kwh  pv_surplus_hours  evaluation_days  efc_per_day  total_rl_reward_eur  cost_plus_penalty_eur  adjusted_cost_plus_penalty_eur  cost_difference_vs_rule_based_eur
+No Battery                   29929.207             0.000             0.000                       293147.373                   91.920                   0.000                   0.000                         74.455            0.000          0.000               0.000              0.000                0.000                 0.000          9618.471               0.000                    0.000                 29929.207                             0.096                        0.000                       29929.207                      0.000                      0.000         119038.170        9618.471               594          366.000        0.000           -29929.207              29929.207                       29929.207                           1303.151
+Rule-Based                   28626.055          1303.151             4.354                       295754.375                   92.329               61146.869                 305.734                        116.907           50.000         10.000             -40.000            486.727            31633.572                 0.000          9131.744            3133.729                  611.469                 28626.055                             0.096                        4.055                       28630.110                   1299.097                      4.341         119038.170        9618.471               594          366.000        0.835           -29237.524              29237.524                       29241.579                              0.000
+Q-Learning                   29925.229             3.977             0.013                       293109.373                   91.920                  38.000                   0.190                         74.455           50.000         10.000             -40.000              0.000                0.000                 0.000          9618.471               2.000                    0.380                 29925.229                             0.096                        4.055                       29929.284                     -0.077                     -0.000         119038.170        9618.471               594          366.000        0.001           -29925.609              29925.609                       29929.664                           1299.174
+Saved selected model. Full-seed reproducibility: False

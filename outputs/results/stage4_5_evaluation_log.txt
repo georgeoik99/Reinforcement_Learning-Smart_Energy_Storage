@@ -1,0 +1,32 @@
+  Strategy  total_electricity_cost_eur  cost_savings_eur  cost_savings_pct  total_grid_energy_purchased_kwh  pv_self_consumption_pct  battery_throughput_kwh  equivalent_full_cycles  peak_grid_import_kwh_per_hour  initial_soc_kwh  final_soc_kwh  net_soc_change_kwh  pv_to_battery_kwh  grid_to_battery_kwh  unused_discharge_kwh  pv_curtailed_kwh  battery_losses_kwh  degradation_penalty_eur  raw_electricity_cost_eur  terminal_reference_price_eur_kwh  terminal_soc_adjustment_eur  terminal_soc_adjusted_cost_eur  adjusted_cost_savings_eur  adjusted_cost_savings_pct  pv_generation_kwh  pv_surplus_kwh  pv_surplus_hours  evaluation_days  efc_per_day  total_rl_reward_eur  cost_plus_penalty_eur  adjusted_cost_plus_penalty_eur  cost_difference_vs_rule_based_eur
+No Battery                   29881.607             0.000             0.000                       292736.997                   91.926                   0.000                   0.000                         71.364            0.000          0.000               0.000              0.000                0.000                 0.000          9558.661               0.000                    0.000                 29881.607                             0.096                        0.000                       29881.607                      0.000                      0.000         118393.285        9558.661               574          365.000        0.000           -29881.607              29881.607                       29881.607                           1201.620
+Rule-Based                   28679.986          1201.620             4.021                       295188.527                   92.358               58587.234                 292.936                        115.833           50.000         10.000             -40.000            511.023            30263.871                 0.000          9047.638            3002.552                  585.872                 28679.986                             0.096                        4.055                       28684.041                   1197.566                      4.008         118393.285        9558.661               574          365.000        0.803           -29265.859              29265.859                       29269.913                              0.000
+Q-Learning                   29877.613             3.994             0.013                       292698.997                   91.926                  38.000                   0.190                         71.364           50.000         10.000             -40.000              0.000                0.000                 0.000          9558.661               2.000                    0.380                 29877.613                             0.096                        4.055                       29881.667                     -0.060                     -0.000         118393.285        9558.661               574          365.000        0.001           -29877.993              29877.993                       29882.047                           1197.626
+{
+  "test_start": "2025-01-01 00:00:00",
+  "test_end": "2025-12-31 23:00:00",
+  "test_rows": 8760,
+  "effective_epsilon": 0,
+  "q_updates_during_evaluation": 0,
+  "q_table_sha256": "041420848e948a58686b414355ba3c51e19f30a39a0686612c4fe2c7581451de",
+  "training_states_visited": 319,
+  "possible_states": 384,
+  "unseen_test_state_hours": 3,
+  "unseen_chosen_action_hours": 3,
+  "baseline_reproduction": "identical to refined Stage-3 results within 1e-8",
+  "soc_treatment": "Common initial SOC; raw cost and separate training-price terminal valuation",
+  "test_policy_tuned": false,
+  "terminal_reference_price_eur_kwh": 0.09629499999999999,
+  "pv_surplus_behaviour": {
+    "pv_surplus_hours": 574,
+    "charge_actions_during_surplus": 0,
+    "pv_surplus_kwh": 9558.661,
+    "pv_to_battery_kwh": 0.0,
+    "surplus_captured_pct": 0.0,
+    "grid_to_battery_kwh": 0.0,
+    "discharge_to_load_kwh": 38.0,
+    "zero_flow_soc_boundary_commands": 4783,
+    "zero_flow_no_load_commands_excluding_boundary": 0,
+    "all_zero_flow_non_hold_commands": 4783
+  }
+}

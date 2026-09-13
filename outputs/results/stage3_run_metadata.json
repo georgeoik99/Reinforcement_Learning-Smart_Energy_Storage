@@ -1,0 +1,66 @@
+{
+  "stage": "4.5",
+  "dataset": "data/processed/energy_hourly_2023_2025.csv",
+  "source_sha256": {
+    "data/processed/energy_hourly_2023_2025.csv": "a1bf1bf2721f778bd4c1b43d389d946f83ed9cf093b0f9fe2295dfdd8c6ab4ba",
+    "config/battery_config.json": "912418534c0574d90225c97f464b261851c0a1edb34b0dcf35a98efde67a9871",
+    "src/environment/battery_model.py": "4940cc406a699a01cd949ec8a3ddd3e2b51871dfb903927f6106fc3fe3bdd49a",
+    "src/environment/energy_storage_env.py": "a14ced8989083cd178b006416cfe3cb1d370c8589655bebb57ecbd27955b9ca6"
+  },
+  "split_rule": "2023=training; 2024=validation; 2025=test",
+  "splits": {
+    "training": {
+      "rows": 8760,
+      "start": "2023-01-01 00:00:00",
+      "end": "2023-12-31 23:00:00"
+    },
+    "validation": {
+      "rows": 8784,
+      "start": "2024-01-01 00:00:00",
+      "end": "2024-12-31 23:00:00"
+    },
+    "test": {
+      "rows": 8760,
+      "start": "2025-01-01 00:00:00",
+      "end": "2025-12-31 23:00:00"
+    }
+  },
+  "thresholds": {
+    "low_eur_kwh": 0.0828175,
+    "high_eur_kwh": 0.11045,
+    "training_start": "2023-01-01 00:00:00",
+    "training_end": "2023-12-31 23:00:00",
+    "training_rows": 8760
+  },
+  "terminal_reference_price_eur_kwh": 0.09629499999999999,
+  "quantile_interpolation": "linear",
+  "validation_used_for_tuning": false,
+  "current_hour_observations_available_before_dispatch": true,
+  "battery_config": {
+    "capacity_kwh": 100.0,
+    "max_charge_power_kw": 50.0,
+    "max_discharge_power_kw": 50.0,
+    "charge_efficiency": 0.95,
+    "discharge_efficiency": 0.95,
+    "min_soc_fraction": 0.1,
+    "max_soc_fraction": 0.95,
+    "initial_soc_fraction": 0.5,
+    "timestep_hours": 1.0
+  },
+  "throughput_penalty_eur_per_kwh": 0.01,
+  "terminal_soc_treatment": "Raw and adjusted KPIs; training-median replenishment cost / avoided-load credit",
+  "initial_soc_treatment": "Reset once to configured initial SOC; no purchase charge for initial inventory",
+  "dispatch_accounting": "Residual-load-capped discharge; no export or unused discharge",
+  "example_week": {
+    "selection_rule": "First full Monday-Sunday week in June",
+    "start": "2025-06-02 00:00:00",
+    "end_exclusive": "2025-06-09 00:00:00"
+  },
+  "hourly_accounting_assertions": "passed for both test strategies",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.5.3",
+    "pandas": "3.0.1",
+    "matplotlib": "3.11.1"
+  }
+}

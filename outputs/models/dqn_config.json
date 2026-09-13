@@ -1,0 +1,82 @@
+{
+  "stage": 5,
+  "algorithm": "Vanilla DQN",
+  "architecture": [
+    7,
+    64,
+    64,
+    3
+  ],
+  "hyperparameters": {
+    "episodes": 100,
+    "gamma": 0.95,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "replay_buffer_size": 50000,
+    "minimum_replay_size": 2000,
+    "epsilon_start": 1.0,
+    "epsilon_min": 0.05,
+    "epsilon_decay_steps": 350400,
+    "train_every": 4,
+    "target_sync_steps": 1000,
+    "hidden_layers": [
+      64,
+      64
+    ],
+    "gradient_clip_norm": 10.0,
+    "seed": 42
+  },
+  "loss": "Huber (smooth L1), beta=1",
+  "device": "cpu",
+  "torch_threads": 1,
+  "torch_version": "2.14.0+cpu",
+  "numpy_version": "2.5.3",
+  "pandas_version": "3.0.1",
+  "training_year": 2023,
+  "validation_year": 2024,
+  "test_year": 2025,
+  "model_selection": "Fixed final episode 100; one predefined configuration; no test tuning",
+  "validation_review_status": "accepted_no_changes",
+  "provenance": {
+    "data/processed/energy_hourly_2023_2025.csv": "a1bf1bf2721f778bd4c1b43d389d946f83ed9cf093b0f9fe2295dfdd8c6ab4ba",
+    "config/battery_config.json": "912418534c0574d90225c97f464b261851c0a1edb34b0dcf35a98efde67a9871",
+    "src/environment/energy_storage_env.py": "a14ced8989083cd178b006416cfe3cb1d370c8589655bebb57ecbd27955b9ca6",
+    "src/environment/battery_model.py": "4940cc406a699a01cd949ec8a3ddd3e2b51871dfb903927f6106fc3fe3bdd49a",
+    "src/agents/dqn_agent.py": "1cf67ccee364a786de2a80e46c3f956c666feb627179d52ca0c0011e5d3d2ecd",
+    "src/agents/replay_buffer.py": "818a4b3296f04f2445a38c79ee05e6376021a56f7d8cdca0b8bcb20ed56d645a",
+    "src/agents/state_normalizer.py": "4b974cb336bb6dfc91d1ab9cfcb875eb4c486318efaa2ab090cd074fb08324bb",
+    "src/training/train_dqn.py": "cb353779a20211f8ffccb5d26621da644fcbc27be7340d84b404ab1a42916fe6",
+    "outputs/models/q_table.csv": "041420848e948a58686b414355ba3c51e19f30a39a0686612c4fe2c7581451de",
+    "outputs/results/q_learning_comparison.csv": "251a114c449172f9ddc61fa3017ef09cb890d453a2e9621f3a978279bd27d578",
+    "outputs/results/q_learning_validation_comparison.csv": "6d684503906c0d5f395e4a62a35e88261b11daf1e6d232b0079c06dcf9ef6763"
+  },
+  "reward_changed": false,
+  "battery_config": {
+    "capacity_kwh": 100.0,
+    "max_charge_power_kw": 50.0,
+    "max_discharge_power_kw": 50.0,
+    "charge_efficiency": 0.95,
+    "discharge_efficiency": 0.95,
+    "min_soc_fraction": 0.1,
+    "max_soc_fraction": 0.95,
+    "initial_soc_fraction": 0.5,
+    "timestep_hours": 1.0
+  },
+  "throughput_penalty_eur_per_kwh": 0.01,
+  "training_steps": 876000,
+  "gradient_updates": 218501,
+  "target_syncs": 876,
+  "model_sha256": "2f5d454a3fd10aa8edc51f9a32cc2092b5fb389fbd145d980c94601524335425",
+  "normalizer_sha256": "b943ba7183ca2f095986087ea9e4f268deacd2f8adc9995b118524f7d5821556",
+  "validation_frozen_state_verified": true,
+  "validation_reload_exact": true,
+  "validation_review": {
+    "decision_basis": "Frozen 2024 validation only; 2025 test remained unopened for selection",
+    "policy_collapse": false,
+    "nonfinite_loss_or_q_values": false,
+    "validation_adjusted_cost_eur": 28344.435459203494,
+    "validation_adjusted_difference_vs_rule_based_eur": -285.6744165566233,
+    "validation_efc_per_day": 1.4946692131374595,
+    "configuration_changed_after_validation": false
+  }
+}
