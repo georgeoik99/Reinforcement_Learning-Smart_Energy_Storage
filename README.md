@@ -203,16 +203,3 @@ serialization and robustness aggregation. All pass.
 Add explicit degradation and peak-demand costs, test export/dynamic tariffs,
 replace synthetic inputs with HEnEx/PVGIS or customer data, and consider
 continuous control only when the business case justifies added complexity.
-
-## Tech Stack
-
-Python, Pandas, NumPy, PyTorch, Matplotlib and the standard-library `unittest`
-framework.
-
-## Project Status
-
-Stages 1–6 are complete. The project is prepared for GitHub review; no Git
-repository was initialized and nothing was pushed. See
-[`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md) for the compact scientific
-checkpoint and [`docs/github_preparation.md`](docs/github_preparation.md) for
-suggested repository metadata.
